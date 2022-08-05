@@ -1,0 +1,31 @@
+<odoo>
+	<record id="pdf_document_ex_form_view" model="ir.ui.view">
+		<field name='name'>pdf.document.ex.form</field>
+		<field name="model">pdf.document.ex</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="data_infor" />	
+				</group>
+				<footer>
+                    <button string="Confirm pdf" name="action_pdf" class="btn-primary" type="object"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                 </footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_pdf_document_ex" model="ir.actions.act_window">
+		<field name="name">PDF Documents Ex</field>
+		<field name="res_model">pdf.document.ex</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+                Create new pdf document.
+              </p>
+		</field>
+	</record>
+	<menuitem id="pdf_document_ex_menu_root" name="PDF Document Ex" groups="base.group_user" />
+	<menuitem id="pdf_document_ex_menu" name="PDF Document Ex" action="action_pdf_document_ex" parent="pdf_document_ex_menu_root" />
+</odoo>

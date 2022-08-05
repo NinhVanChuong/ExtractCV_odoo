@@ -1,0 +1,12 @@
+<odoo>
+	<record id="hr_applicant_button" model="ir.ui.view">
+		<field name="name">hr.applicant.button</field>
+		<field name="model">hr.applicant</field>
+		<field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"></field>
+		<field name="arch" type="xml">
+			<xpath expr="//header/button[@name='create_employee_from_applicant']" position="after">
+				<button string="Create Employee-CV" name="create_new_employee_from_applicant" type="object" class="oe_highlight"></button>
+			</xpath>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+	<record id="extract_cv_wizard_action" model="ir.actions.act_window">
+		<field name="name">Extract CV Action</field>
+		<field name="res_model">extract.cv.wizard</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+	<record id="extract_cv_wizard_form" model="ir.ui.view">
+		<field name="name">Extract CV Form</field>
+		<field name="model">extract.cv.wizard</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<field name="pdf_file" widget="pdf"/>
+					<footer>
+						<button string="Create Employee From PDF" name="extract" type="object" class="oe_highlight"/>
+					</footer>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>
