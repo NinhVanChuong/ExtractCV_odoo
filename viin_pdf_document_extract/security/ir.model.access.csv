@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-viin_pdf_document_extract.access_pdf_document,access_pdf_document,viin_pdf_document_extract.model_pdf_document,base.group_user,1,1,1,1
-viin_pdf_document_extract.access_pdf_document_data,access_pdf_document_data,viin_pdf_document_extract.model_pdf_document_data,base.group_user,1,1,1,1
-viin_pdf_document_extract.access_pdf_document_ex,access_pdf_document_ex,viin_pdf_document_extract.model_pdf_document_ex,base.group_user,1,1,1,1
-viin_pdf_document_extract.access_pdf_document_active_report,access_pdf_document_active_report,viin_pdf_document_extract.model_pdf_document_active_report,base.group_user,1,1,1,1
