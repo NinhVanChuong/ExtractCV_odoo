@@ -20,7 +20,7 @@ class Applicant(models.Model):
         dicts={}
         face = None
         url = attachment._filestore() + '/'+attachment.store_fname
-        images = convert_from_path(url,dpi=500,poppler_path=r'/opt/homebrew/Cellar/poppler/22.06.0_1/bin')
+        images = convert_from_path(url,dpi=500,poppler_path=r'/opt/homebrew/Cellar/poppler/22.06.0_2/bin')
         for i in range(len(images)):
             images[i].save(f'CV'+ str(i) +'.jpg','JPEG')
             dict,face1 = detector.convert_to_record(f'CV'+ str(i) +'.jpg')
@@ -39,7 +39,7 @@ class Applicant(models.Model):
             
         gender = dicts.get('gener')
         gender = gender.lower()
-        if gender == 'nam':
+        if gender == 'nam' or gender =='male':
             gender = 'male'
         else:
             gender = 'female'

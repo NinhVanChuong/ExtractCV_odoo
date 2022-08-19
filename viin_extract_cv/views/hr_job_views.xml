@@ -6,7 +6,7 @@
 		<field name="arch" type="xml">
 			<xpath expr="//field[@name='new_application_count']/ancestor::button" position="inside">
         		 <button string="Create Applicant From CV" name="extract_wizard" type="object" class="oe_highlight">
-        		 	<i class="fa fa-upload" >Create Applicantion</i>
+        		 	<i class="fa fa-upload">Create Applicantion</i>
         		 </button>
     		</xpath>
 		</field>

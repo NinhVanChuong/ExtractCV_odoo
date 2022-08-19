@@ -70,7 +70,7 @@ Tính năng chính
     'version': '0.1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['hr_recruitment'],
+    'depends': ['hr_recruitment','hr'],
 
     # always loaded
     'data': [
@@ -78,11 +78,15 @@ Tính năng chính
         'views/hr_job_views.xml',
         # 'views/hr_applicant_views.xml',
         'wizard/extract_cv_wizard.xml',
-        # 'wizard/add_attachment.xml',
     ],
-    'images' : [
-        # 'static/description/main_screenshot.png'
+    'assets':{
+        'web.assets_backend':[
+            'viin_extract_cv/static/src/js/chatbot_systray.js',
         ],
+        'web.assets_qweb':[
+            'viin_extract_cv/static/src/xml/systray_chatbot_templete.xml',
+        ],
+    },
     'installable': True,
     'application': False,
     'auto_install': False,
